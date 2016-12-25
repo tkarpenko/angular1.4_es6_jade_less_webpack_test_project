@@ -1,0 +1,318 @@
+section.home-top.clearfix
+  video(preload="auto" autoplay loop poster="/assets/img/home/top.jpg")
+    source(src=require("../../../assets/img/home/top_video.mp4") type="video/mp4")
+    | Your browser doesn't support HTML5 video tag.
+  .content
+    .home-desc_big The first video collection of drone racing
+    .home-desc_small Join the biggest network to watch the best drone races, competitions and events
+    button.home-fb_acc_btn(type="button")
+      i.icon.icon-facebook 
+      | Enter with Facebook
+    button.home-new_acc_btn(type="button") Create account
+
+section.tags.line
+  .tags-list(
+    ng-scrollable="{scrollX:'bottom',scrollY:'none'}" 
+    style="width:100%;" 
+    spy-x="posX"
+    ng-mouseover="home.doScroll($event)" 
+    ng-mouseleave="home.stopScroll($event)")
+    a.tags-tag(href="/videos/tags=championship"): span #championship
+    a.tags-tag(href="/videos/tags=racing"): span #racing
+    a.tags-tag(href="/videos/tags=dubai"): span #dubai
+    a.tags-tag(href="/videos/tags=amateur"): span #amateur
+    a.tags-tag(href="/videos/tags=NY_racing"): span #NY_racing
+    a.tags-tag(href="/videos/tags=tournament"): span #tournament
+    a.tags-tag(href="/videos/tags=super_speed"): span #super_speed
+    a.tags-tag(href="/videos/tags=japan"): span #japan
+    a.tags-tag(href="/videos/tags=topracer"): span #topracer
+    a.tags-tag(href="/videos/tags=challenge"): span #challenge
+    a.tags-tag(href="/videos/tags=lovely"): span #lovely
+    a.tags-tag(href="/videos/tags=championshiptitle"): span #championshiptitle
+    a.tags-tag(href="/videos/tags=tournament"): span #tournament
+    a.tags-tag(href="/videos/tags=super_speed"): span #super_speed
+    a.tags-tag(href="/videos/tags=japan"): span #japan
+    a.tags-tag(href="/videos/tags=topracer"): span #topracer
+    a.tags-tag(href="/videos/tags=challenge"): span #challenge
+    a.tags-tag(href="/videos/tags=lovely"): span #lovely
+    a.tags-tag(href="/videos/tags=championshiptitle"): span #championshiptitle
+
+
+section.content
+  .home-videos_categories.clearfix
+    a.category.championships(href="/videos")
+      span.title Global Competition
+      span.videos_count
+        i.pic.play_green
+        | 1263 videos
+    a.category.racings(href="/videos")
+      span.title Amateur Racings
+      span.videos_count
+        i.pic.play_green
+        | 1263 videos
+    a.category.highlights(href="/videos")
+      span.title Best Highlights
+      span.videos_count
+        i.pic.play_green
+        | 22263 videos
+
+section.content
+  d-gradient-text(text="Most Popular" class-name="home-video_list_title")
+  a.home-see_all_btn(href="/videos")
+    span 
+      span.text See all
+      i.icon.icon-arrow
+
+  .home-recently_videos.clearfix
+    a.video-item(href="/video")
+      .cover
+        .img(style="background-image:url('/assets/img/home/top.jpg');")
+        .time 02:23
+      .desc
+        .title Drone racing @ Miami Dolphins stadium
+        .author
+          img.avatar(src="/assets/img/home/top.jpg")
+          | Beulah Robinson
+      .play
+        .pic.play_gray
+    a.video-item(href="/video")
+      .cover
+        .img(style="background-image:url('/assets/img/home/top.jpg');")
+        .time 02:23
+      .desc
+        .title Drone racing @ Miami Dolphins stadium
+        .author
+          img.avatar(src="/assets/img/home/top.jpg")
+          | Beulah Robinson
+      .play
+        .pic.play_gray
+    a.video-item(href="/video")
+      .cover
+        .img(style="background-image:url('/assets/img/home/top.jpg');")
+        .time 02:23
+      .desc
+        .title Drone racing @ Miami Dolphins stadium
+        .author
+          img.avatar(src="/assets/img/home/top.jpg")
+          | Beulah Robinson
+      .play
+        .pic.play_gray
+    a.video-item(href="/video")
+      .cover
+        .img(style="background-image:url('/assets/img/home/top.jpg');")
+        .time 02:23
+      .desc
+        .title Drone racing @ Miami Dolphins stadium
+        .author
+          img.avatar(src="/assets/img/home/top.jpg")
+          | Beulah Robinson
+      .play
+        .pic.play_gray
+    a.video-item(href="/video")
+      .cover
+        .img(style="background-image:url('"+require('../../../assets/img/home/typ.jpg')+"');")
+        .time 02:23
+      .desc
+        .title Drone racing @ Miami Dolphins stadium
+        .author
+          img.avatar(src="/assets/img/home/top.jpg")
+          | Beulah Robinson
+      .play
+        .pic.play_gray
+    a.video-item(href="/video")
+      .cover
+        .img(style="background-image:url('/assets/img/home/top.jpg');")
+        .time 02:23
+      .desc
+        .title Drone racing @ Miami Dolphins stadium
+        .author
+          img.avatar(src="/assets/img/home/top.jpg")
+          | Beulah Robinson
+      .play
+        .pic.play_gray
+    a.video-item(href="/video")
+      .cover
+        .img(style="background-image:url('/assets/img/home/top.jpg');")
+        .time 02:23
+      .desc
+        .title Drone racing @ Miami Dolphins stadium
+        .author
+          img.avatar(src="/assets/img/home/top.jpg")
+          | Beulah Robinson
+      .play
+        .pic.play_gray
+    a.video-item(href="/video")
+      .cover
+        .img(style="background-image:url('/assets/img/home/top.jpg');")
+        .time 02:23
+      .desc
+        .title Drone racing @ Miami Dolphins stadium
+        .author
+          img.avatar(src="/assets/img/home/top.jpg")
+          | Beulah Robinson
+      .play
+        .pic.play_gray
+    a.video-item(href="/video")
+      .cover
+        .img(style="background-image:url('/assets/img/home/top.jpg');")
+        .time 02:23
+      .desc
+        .title Drone racing @ Miami Dolphins stadium
+        .author
+          img.avatar(src="/assets/img/home/top.jpg")
+          | Beulah Robinson
+      .play
+        .pic.play_gray
+   
+
+section.home-featured_videos_bg
+  .content
+    d-gradient-text(text="Featured Video" class-name="home-video_list_title")
+    .home-vert_scroll_arw
+      button.left(type="button")
+        .pic.arrow
+      button.right(type="button")
+        .pic.arrow
+  .home-featured_videos
+    .featured_videos_window
+      .featured_videos_list
+        a.video-item(href="/video")
+          .cover
+            .img(style="background-image:url('/assets/img/home/top.jpg');")
+            .time 02:23
+          .desc
+            .title Drone racing @ Miami Dolphins stadium
+            .author
+              img.avatar(src="/assets/img/home/top.jpg")
+              | Beulah Robinson
+          .play
+            .pic.play_gray
+        a.video-item(href="/video")
+          .cover
+            .img(style="background-image:url('/assets/img/home/top.jpg');")
+            .time 02:23
+          .desc
+            .title Drone racing @ Miami Dolphins stadium
+            .author
+              img.avatar(src="/assets/img/home/top.jpg")
+              | Beulah Robinson
+          .play
+            .pic.play_gray
+        a.video-item(href="/video")
+          .cover
+            .img(style="background-image:url('/assets/img/home/top.jpg');")
+            .time 02:23
+          .desc
+            .title Drone racing @ Miami Dolphins stadium
+            .author
+              img.avatar(src="/assets/img/home/top.jpg")
+              | Beulah Robinson
+          .play
+            .pic.play_gray
+        a.video-item(href="/video")
+          .cover
+            .img(style="background-image:url('/assets/img/home/top.jpg');")
+            .time 02:23
+          .desc
+            .title Drone racing @ Miami Dolphins stadium
+            .author
+              img.avatar(src="/assets/img/home/top.jpg")
+              | Beulah Robinson
+          .play
+            .pic.play_gray
+        a.video-item(href="/video")
+          .cover
+            .img(style="background-image:url('/assets/img/home/top.jpg');")
+            .time 02:23
+          .desc
+            .title Drone racing @ Miami Dolphins stadium
+            .author
+              img.avatar(src="/assets/img/home/top.jpg")
+              | Beulah Robinson
+          .play
+            .pic.play_gray
+        a.video-item(href="/video")
+          .cover
+            .img(style="background-image:url('/assets/img/home/top.jpg');")
+            .time 02:23
+          .desc
+            .title Drone racing @ Miami Dolphins stadium
+            .author
+              img.avatar(src="/assets/img/home/top.jpg")
+              | Beulah Robinson
+          .play
+            .pic.play_gray
+        a.video-item(href="/video")
+          .cover
+            .img(style="background-image:url('/assets/img/home/top.jpg');")
+            .time 02:23
+          .desc
+            .title Drone racing @ Miami Dolphins stadium
+            .author
+              img.avatar(src="/assets/img/home/top.jpg")
+              | Beulah Robinson
+          .play
+            .pic.play_gray
+        a.video-item(href="/video")
+          .cover
+            .img(style="background-image:url('/assets/img/home/top.jpg');")
+            .time 02:23
+          .desc
+            .title Drone racing @ Miami Dolphins stadium
+            .author
+              img.avatar(src="/assets/img/home/top.jpg")
+              | Beulah Robinson
+          .play
+            .pic.play_gray
+        a.video-item(href="/video")
+          .cover
+            .img(style="background-image:url('/assets/img/home/top.jpg');")
+            .time 02:23
+          .desc
+            .title Drone racing @ Miami Dolphins stadium
+            .author
+              img.avatar(src="/assets/img/home/top.jpg")
+              | Beulah Robinson
+          .play
+            .pic.play_gray
+        a.video-item(href="/video")
+          .cover
+            .img(style="background-image:url('/assets/img/home/top.jpg');")
+            .time 02:23
+          .desc
+            .title Drone racing @ Miami Dolphins stadium
+            .author
+              img.avatar(src="/assets/img/home/top.jpg")
+              | Beulah Robinson
+          .play
+            .pic.play_gray
+
+section.home-upcomming_events_bg.content
+  d-gradient-text(text="Upcoming Events" class-name="home-video_list_title")
+  a.home-see_all_btn(href="/") 
+    span 
+      span.text See all
+      i.icon.icon-arrow
+
+  .home-upcomming_events.clearfix
+    a.event_item(href="/")
+      .cover
+        .img(style="background-image:url('"+require('../../../assets/img/home/category_championships.jpg')+"');")
+        .desc
+          .title Drone racing @ Miami Dolphins stadium
+          .date 27 December 2016
+      .event_name National Drone Racing Championship
+    a.event_item(href="/")
+      .cover
+        .img(style="background-image:url('"+require('../../../assets/img/home/category_highlights.jpg')+"');")
+        .desc
+          .title Drone racing @ Miami Dolphins stadium
+          .date 27 December 2016
+      .event_name National Drone Racing Championship
+    a.event_item(href="/")
+      .cover
+        .img(style="background-image:url('"+require('../../../assets/img/home/category_racings.jpg')+"');")
+        .desc
+          .title Drone racing @ Miami Dolphins stadium
+          .date 27 December 2016
+      .event_name National Drone Racing Championship

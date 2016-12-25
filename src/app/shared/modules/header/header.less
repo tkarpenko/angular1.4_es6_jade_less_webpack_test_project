@@ -1,0 +1,53 @@
+@import '../../../../assets/less/mixins.less';
+
+.header {
+  padding-top: 3px;
+  height: 67px;
+  background-color: #1a1a1a;
+  .logo {
+    float: left;
+    .font(#fff, 18px, left, 35px);
+    margin-top: 12px;
+  }
+  .header-menu {
+    float: right;
+    margin-top: 10px;
+    .header-nav {
+      display: block;
+      float: right;
+      margin-right: 20px;
+      .nav_item {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 21px;
+        .font(#fff, 12px, center, 40px);
+      }
+    }
+    .header-auth_btn {
+      float: right;
+      height: 34px;
+      padding: 0 24px;
+      border-radius: 17px;
+      background-color: rgba(255, 255, 255, 0.3);
+      .transition(all .2s ease);
+      .font(#fff, .77em, center, 32px);
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.5);
+        .transition(all .2s ease);
+      }
+    }
+  }
+}
+
+body.home_page .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  background-color: transparent;
+  padding-top: 16px;
+  .menu {
+    margin-top: 13px;
+  }
+}

@@ -1,0 +1,334 @@
+@import '../../../assets/less/mixins.less';
+@imgPath: "../../../assets/img";
+
+.home-top {
+  height: 468px;
+  text-align: center;
+  background: url('@{imgPath}/home/top.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  video {
+    height: auto;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+}
+.home-desc_big,
+.home-desc_small,
+.home-fb_acc_btn,
+.home-new_acc_btn {
+  position: relative;
+  z-index: 2;
+}
+
+.home-desc_big {
+  margin: 121px auto 27px auto;
+  font-family: 'Montserrat';
+  .font(#fff, 47px, center, 56px, 700);
+  max-width: 640px;
+  letter-spacing: 0;
+  clear: both;
+}
+
+.home-desc_small {
+  margin: 0 auto;
+  .font(#fff, .9em, center, 23px);
+  max-width: 328px;
+  clear: both;
+}
+
+.home-fb_acc_btn {
+  display: block;
+  vertical-align: middle;
+  height: 46px;
+  padding: 0 21px 0 16px;
+  margin: 28px auto 0px auto;
+  border-radius: 23px;
+  background-color: #fff;
+  .font(@blue, .8em, center, 45px, 700);
+  letter-spacing: .035em;
+  .transition(all 0.2s ease);
+  .icon {
+    margin: -5px 10px 0 0;
+    font-size: 1.8em;
+    position: relative;
+  }
+  &:hover {
+    background-color: @blue;
+    // padding: 0 27px 0 22px;
+    color: #fff;
+    .transition(all 0.2s ease);
+  }
+}
+.home-new_acc_btn {
+  height: 46px;
+  margin: 20px auto 0 auto;
+  padding: 0 14px;
+  .font(#fff, .8em, center, 42px, 400);
+  letter-spacing: .06em;
+  word-spacing: -0.07em;
+}
+
+
+.home-videos_categories {
+  margin: 0 -1%;
+  .category {
+    float: left;
+    height: 145px;
+    width: 31.3%;
+    border-radius: 3px;
+    padding: 70px 0 0 21px;
+    margin: 0 1%;
+    position: relative;
+    background: no-repeat center top;
+    background-size: cover;
+    &.championships {
+      background-image: url('@{imgPath}/home/category_championships.jpg');
+    }
+    &.racings {
+      background-image: url('@{imgPath}/home/category_racings.jpg');
+    }
+    &.highlights {
+      background-image: url('@{imgPath}/home/category_highlights.jpg');
+    }
+    .title,
+    .videos_count,
+    .play_green {
+      position: relative;
+      z-index: 2;
+    }
+    .title {
+      display: block;
+      .font(#fff, 1.4em, left, 29px, 700);
+      letter-spacing: .035em;
+      word-spacing: -0.01em;
+      overflow: visible;
+    }
+    .videos_count {
+      display: block;
+      margin-top: 16px;
+      .font(#fff, .8em, left, 15px);
+    }
+    .play_green {
+      height: 14px;
+      width: 14px;
+      position: relative;
+      top: -2px;
+      margin-right: 6px;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background-color: rgba(0,0,0,0.5);
+      border-radius: 3px;
+      .transition(all 0.2s ease);
+    }
+    &:hover {
+      &:after {
+        opacity: 1;
+        .transition(all 0.2s ease);
+      }
+    }
+  }
+}
+
+.home-recently_videos {
+
+}
+.home-video_list_title {
+  margin-top: 53px;
+  display: block;
+  float: left;
+  font-family: 'Montserrat', 'Muli', Arial;
+  .font(#fff, 1.26em, left, 29px, 700);
+  letter-spacing: .005em;
+  word-spacing: -0.01em;
+  overflow: visible;
+  width: 200px;
+  height: 26px;
+}
+.home-see_all_btn {
+  float: right;
+  height: 25px;
+  padding: 1px;
+  background-color: @gray;
+  border-radius: 17px;
+  margin-top: 52px;
+  & > span {
+    padding: 0 14px;
+    display: block;
+    height: 23px;
+    border-radius: 17px;
+    background-color: #fff;
+    position: relative;
+    .font(@gray, 0.7em, center, 24px);
+  }
+  .text {
+    opacity: 1;
+    .transition(all 0.2s ease);
+  }
+  .icon {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    font-size: 1.3em;
+    .transform(translate(-50%, 0));
+    .transition(all 0.2s ease);
+  }
+  &:hover {
+    .diagonal_gradient(#ff4541, #ffa503);
+    &>span {
+      background-color: transparent;
+      color: #fff !important;
+    }
+    .text {
+      .transition(all 0.2s ease);
+      opacity: 0;
+    }
+    .icon {
+      .transition(all 0.2s ease);
+      opacity: 1;
+      left: 50%;
+    }
+  }
+}
+
+.home-recently_videos {
+  clear: both;
+  margin: 0 -0.7%;
+  padding-top: 24px;
+  max-height: 310px;
+  overflow: hidden;
+  clear: both;
+  text-align: center;
+  .video-item {
+    width: 23.5%;
+    margin: 0 0.7% 17px 0.7%;
+    float: left;
+  }
+}
+
+.home-featured_videos_bg {
+  background: url('@{imgPath}/home/featured_videos.jpg') no-repeat top center;
+  background-size: cover;
+  height: 407px;
+  margin-top: 32px;
+  .home-video_list_title {
+    margin-top: 42px;
+  }
+}
+
+.home-vert_scroll_arw {
+  float: right;
+  width: 100px;
+  height: 30px;
+  text-align: right;
+  margin-top: 41px;
+  button {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0;
+    margin-left: 9px;
+    .pic {
+      width: 27px;
+      height: 27px;
+    }
+    &.right .pic {
+      .transform(rotate(180deg));
+    }
+  }
+}
+
+.home-featured_videos {
+  height: 295px;
+  width: @contentWidth;
+  margin: 0 auto;
+  overflow: hidden;
+  clear: both;
+  .featured_videos_window {
+    width: 100%;
+    height: 312px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+  }
+  .featured_videos_list {
+    height: 100%;
+    width: 1800px;
+    letter-spacing: -4px;
+    margin-top: 20px;
+    .video-item {
+      margin: 0px 6px 13px 6px;
+    }
+    .video-item:nth-child(1) {
+      height: 270px;
+      width: 439px;
+      float: left;
+      margin: 0 19px 0 0;
+      .desc {
+        height: 64px;
+        padding: 0 13px;
+        .title {
+          font-size: .95em;
+          font-weight: 700;
+          line-height: 25px;
+        }
+        .author {
+          line-height: 36px;
+          img {
+            width: 26px;
+            height: 26px;
+            margin-top: -4px;
+          }
+        }
+      }
+      .play {
+        .pic {
+          height: 77px;
+          width: 20px;
+        }
+      }
+
+      &:hover {
+        .cover {
+          .time {
+            top: -30px;
+          }
+        }
+        .desc {
+          bottom: -75px;
+        }
+        .play {
+          .pic {
+            width: 77px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.home-upcomming_events_bg {
+  .home-video_list_title {
+    margin-top: 43px;
+  }
+  .home-see_all_btn {
+    margin-top: 46px;
+  }
+}
+
+.home-upcomming_events {
+  margin: 0 -2.3% 32px -2.3%;
+  clear: both;
+}

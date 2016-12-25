@@ -1,0 +1,64 @@
+.modal-content.login
+  form#login-form.form(ng-submit="login.submit()" novalidate)
+    button.modal-fb_acc_btn(type="button")
+      i.icon.icon-facebook 
+      | Enter with Facebook
+
+    .form-fieldset(d-form-field-error data-fieldset="email")
+      .form-tip
+      .form-label email
+      .form-error
+      .form-input
+        //- .icon.icon-heart
+        .form-input-text
+          input(
+            name="email"
+            ng-model="login.email"
+            ng-pattern="login.patterns.email"
+            required
+            type="email" 
+            value=""
+            placeholder="Your email here")
+        //- .form-input-option h
+
+    .form-fieldset(d-form-field-error data-fieldset="password")
+      .form-label password
+      .form-error
+      .form-input
+        .form-input-text
+          input(
+            name="password"
+            ng-model="login.password"
+            ng-pattern="login.patterns.password"
+            required
+            type="password" 
+            value=""
+            placeholder="Your password here")
+
+    .form-fieldset
+      label.form-checkbox(ng-class="{visib : !login.isRegistration}")
+        input(
+          name="rememberMe"
+          ng-model="login.rememberMe"
+          type="checkbox"
+          )
+        | Remember me
+      label.form-checkbox(ng-class="{visib : login.isRegistration}")
+        input(
+          name="agree"
+          ng-model="login.agree"
+          type="checkbox"
+          )
+        | Share content providers in Dronescom data of my registration. This information can be used for marketing purposes.
+
+    .form-fieldset
+      button.form-submit(
+        type="submit" 
+        name="submit" 
+        ng-class="[{registration : login.isRegistration}, {login : !login.isRegistration}]"
+        )
+        i.icon.icon-spin
+        span.form-submit_text.login Log in with email
+        span.form-submit_text.registration Create account
+  .modal-footer
+    a.modal-footer_msg(href="/") Forgot password?

@@ -1,0 +1,61 @@
+@import '../../../../assets/less/mixins.less';
+
+.footer {
+  height: 200px;
+  padding-top: 39px;
+  background-color: #2d2d2d;
+}
+
+.footer-general_info {
+  width: 26%;
+  float: left;
+  padding-top: 1px;
+  .logo {
+    .font(#8f8f8f, 1.13em, left, 30px);
+  }
+  .copyright {
+    .font(#fff, .6em, left, 20px);
+    margin-top: 33px;
+  }
+  .sign {
+    .font(#8f8e94, 0.76em, left, 20px, 700);
+    font-family: 'Montserrat';
+    letter-spacing: 0;
+    margin-top: 15px;
+    .icon {
+      color: #ff4242;
+      margin: 0 3px;
+      font-size: .85em;
+    }
+  }
+}
+
+.footer-links {
+  float: left;
+  text-align: right;
+  width: 40%;
+  &>a {
+    display: inline-block;
+    vertical-align: middle;
+    width: 48%;
+    max-width: 191px;
+    .font(#fff, 0.67em, left, 20px);
+    margin: 6px 0;
+  }
+}
+
+.footer-social {
+  float: right;
+  text-align: right;
+  width: 24%;
+  padding-top: 9px;
+  &>a {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 24px;
+    .pic {
+      height: 32px;
+      width: 32px;
+    } 
+  }
+}

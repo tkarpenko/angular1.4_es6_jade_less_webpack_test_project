@@ -1,0 +1,52 @@
+@import '../../../assets/less/mixins.less';
+@imgPath: "../../../assets/img";
+
+.videos-list_title {
+  margin-top: 4px;
+  display: block;
+  float: left;
+  font-family: 'Montserrat', 'Muli', Arial;
+  .font(#fff, 1.8em, left, 32px, 700);
+  letter-spacing: .005em;
+  word-spacing: -0.01em;
+  overflow: visible;
+  height: 32px;
+}
+
+.videos-tags-list {
+  float: left;
+  .tags-list-tag {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    margin-right: 24px;
+  }
+  .tags-list-remove {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 50%;
+    border: 1px solid #a6a6a6;
+    margin-left: 14px;
+    line-height: 21px;
+  }
+}
+
+.videos-list {
+  margin: 30px -1.4% 0 -1.4%;
+  text-align: center;
+  .video-item {
+    margin: 0 1.4% 63px 1.4%;
+  }
+}
+
+.videos-more_btn {
+  display: block;
+  margin: 5px auto 50px auto;
+  border: 1px solid @blue;
+  border-radius: 4px;
+  .font(@blue, 0.8em, center, 38px, 700);
+  width: 234px;
+  height: 38px;
+}

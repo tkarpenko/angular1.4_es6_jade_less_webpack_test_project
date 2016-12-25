@@ -1,0 +1,8 @@
+.modal-menu
+  button.modal-menu_item(
+    ng-repeat="item in menu"
+    ng-click="switchItem( $event, item.predicate )"
+    ng-class="{ active : predicate == item.predicate}"
+    ) 
+    | {{item.title}}
+  hr.modal-menu_line

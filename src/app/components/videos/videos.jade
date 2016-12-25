@@ -1,0 +1,266 @@
+.content.fullwidth
+  .videos-tags-list
+
+    .tags-list-tag
+      d-gradient-text(text="#videos" class-name="videos-list_title")
+      button.tags-list-remove(type="button")
+        i.icon.icon-cross
+    .tags-list-tag
+      d-gradient-text(text="#JapanCountry" class-name="videos-list_title")
+      button.tags-list-remove(type="button")
+        i.icon.icon-cross
+    .tags-list-tag
+      d-gradient-text(text="#janan" class-name="videos-list_title")
+      button.tags-list-remove(type="button")
+        i.icon.icon-cross
+
+
+  .filter
+    .filter-options.clearfix
+      button.filter-option(
+        ng-repeat="filter in videos.filters"
+        ng-click="videos.setPredicate( filter.predicate )"
+        ng-class="{ active : videos.predicate == filter.predicate}"
+        ) 
+        | {{filter.title}}
+
+    .filter-content(ng-class="{open : videos.predicate === 'tags'}")
+      .filter-content_arw.option-tags
+      .tags
+        .tags-list
+          a.tags-tag(href="/videos/tags=championship"): span #championship
+          a.tags-tag(href="/videos/tags=racing"): span #racing
+          a.tags-tag(href="/videos/tags=dubai"): span #dubai
+          a.tags-tag(href="/videos/tags=amateur"): span #amateur
+          a.tags-tag(href="/videos/tags=NY_racing"): span #NY_racing
+          a.tags-tag(href="/videos/tags=tournament"): span #tournament
+          a.tags-tag(href="/videos/tags=super_speed"): span #super_speed
+          a.tags-tag(href="/videos/tags=japan"): span #japan
+          a.tags-tag(href="/videos/tags=topracer"): span #topracer
+          a.tags-tag(href="/videos/tags=challenge"): span #challenge
+          a.tags-tag(href="/videos/tags=lovely"): span #lovely
+          a.tags-tag(href="/videos/tags=championshiptitle"): span #championshiptitle
+          a.tags-tag(href="/videos/tags=tournament"): span #tournament
+          a.tags-tag(href="/videos/tags=super_speed"): span #super_speed
+          a.tags-tag(href="/videos/tags=japan"): span #japan
+          a.tags-tag(href="/videos/tags=topracer"): span #topracer
+          a.tags-tag(href="/videos/tags=challenge"): span #challenge
+          a.tags-tag(href="/videos/tags=lovely"): span #lovely
+          a.tags-tag(href="/videos/tags=championshiptitle"): span #championshiptitle
+
+    .filter-content(ng-class="{open : videos.predicate === 'popularity'}")
+      .filter-content_arw.option-popularity
+        | popularity
+
+
+  .videos-list
+    a.video-item(href="/video")
+      .cover
+        .img(style="background-image:url('/assets/img/home/top.jpg');")
+        .time 02:23
+        .desc
+          .title Drone racing @ Miami Dolphins stadium
+          .author
+            img.avatar(src="/assets/img/home/top.jpg")
+            | Beulah Robinson
+      .play
+        .pic.play_gray
+      .statistic
+        .stat_item
+          i.icon.icon-eye
+          | 12300
+        .stat_item
+          i.icon.icon-chat
+          | 12
+        .stat_item
+          i.icon.icon-heart
+          | 500
+    a.video-item(href="/video")
+      .cover
+        .img(style="background-image:url('/assets/img/home/top.jpg');")
+        .time 02:23
+        .desc
+          .title Drone racing @ Miami Dolphins stadium
+          .author
+            img.avatar(src="/assets/img/home/top.jpg")
+            | Beulah Robinson
+      .play
+        .pic.play_gray
+      .statistic
+        .stat_item
+          i.icon.icon-eye
+          | 12300
+        .stat_item
+          i.icon.icon-chat
+          | 12
+        .stat_item
+          i.icon.icon-heart
+          | 500
+    a.video-item(href="/video")
+      .cover
+        .img(style="background-image:url('/assets/img/home/top.jpg');")
+        .time 02:23
+        .desc
+          .title Drone racing @ Miami Dolphins stadium
+          .author
+            img.avatar(src="/assets/img/home/top.jpg")
+            | Beulah Robinson
+      .play
+        .pic.play_gray
+      .statistic
+        .stat_item
+          i.icon.icon-eye
+          | 12300
+        .stat_item
+          i.icon.icon-chat
+          | 12
+        .stat_item
+          i.icon.icon-heart
+          | 500
+    a.video-item(href="/video")
+      .cover
+        .img(style="background-image:url('/assets/img/home/top.jpg');")
+        .time 02:23
+        .desc
+          .title Drone racing @ Miami Dolphins stadium
+          .author
+            img.avatar(src="/assets/img/home/top.jpg")
+            | Beulah Robinson
+      .play
+        .pic.play_gray
+      .statistic
+        .stat_item
+          i.icon.icon-eye
+          | 12300
+        .stat_item
+          i.icon.icon-chat
+          | 12
+        .stat_item
+          i.icon.icon-heart
+          | 500
+    a.video-item(href="/video")
+      .cover
+        .img(style="background-image:url('/assets/img/home/top.jpg');")
+        .time 02:23
+        .desc
+          .title Drone racing @ Miami Dolphins stadium
+          .author
+            img.avatar(src="/assets/img/home/top.jpg")
+            | Beulah Robinson
+      .play
+        .pic.play_gray
+      .statistic
+        .stat_item
+          i.icon.icon-eye
+          | 12300
+        .stat_item
+          i.icon.icon-chat
+          | 12
+        .stat_item
+          i.icon.icon-heart
+    a.video-item(href="/video")
+      .cover
+        .img(style="background-image:url('/assets/img/home/top.jpg');")
+        .time 02:23
+        .desc
+          .title Drone racing @ Miami Dolphins stadium
+          .author
+            img.avatar(src="/assets/img/home/top.jpg")
+            | Beulah Robinson
+      .play
+        .pic.play_gray
+      .statistic
+        .stat_item
+          i.icon.icon-eye
+          | 12300
+        .stat_item
+          i.icon.icon-chat
+          | 12
+        .stat_item
+          i.icon.icon-heart
+          | 500
+    a.video-item(href="/video")
+      .cover
+        .img(style="background-image:url('/assets/img/home/top.jpg');")
+        .time 02:23
+        .desc
+          .title Drone racing @ Miami Dolphins stadium
+          .author
+            img.avatar(src="/assets/img/home/top.jpg")
+            | Beulah Robinson
+      .play
+        .pic.play_gray
+      .statistic
+        .stat_item
+          i.icon.icon-eye
+          | 12300
+        .stat_item
+          i.icon.icon-chat
+          | 12
+        .stat_item
+          i.icon.icon-heart
+          | 500
+    a.video-item(href="/video")
+      .cover
+        .img(style="background-image:url('/assets/img/home/top.jpg');")
+        .time 02:23
+        .desc
+          .title Drone racing @ Miami Dolphins stadium
+          .author
+            img.avatar(src="/assets/img/home/top.jpg")
+            | Beulah Robinson
+      .play
+        .pic.play_gray
+      .statistic
+        .stat_item
+          i.icon.icon-eye
+          | 12300
+        .stat_item
+          i.icon.icon-chat
+          | 12
+        .stat_item
+          i.icon.icon-heart
+          | 500
+    a.video-item(href="/video")
+      .cover
+        .img(style="background-image:url('/assets/img/home/top.jpg');")
+        .time 02:23
+        .desc
+          .title Drone racing @ Miami Dolphins stadium
+          .author
+            img.avatar(src="/assets/img/home/top.jpg")
+            | Beulah Robinson
+      .play
+        .pic.play_gray
+      .statistic
+        .stat_item
+          i.icon.icon-eye
+          | 12300
+        .stat_item
+          i.icon.icon-chat
+          | 12
+        .stat_item
+          i.icon.icon-heart
+          | 500
+    a.video-item(href="/video")
+      .cover
+        .img(style="background-image:url('/assets/img/home/top.jpg');")
+        .time 02:23
+        .desc
+          .title Drone racing @ Miami Dolphins stadium
+          .author
+            img.avatar(src="/assets/img/home/top.jpg")
+            | Beulah Robinson
+      .play
+        .pic.play_gray
+      .statistic
+        .stat_item
+          i.icon.icon-eye
+          | 12300
+        .stat_item
+          i.icon.icon-chat
+          | 12
+        .stat_item
+          i.icon.icon-heart
+          | 500
+  .videos-more_btn Show more

@@ -1,0 +1,279 @@
+@import '../../../assets/less/mixins.less';
+@imgPath: "../../../assets/img";
+
+.video-container {
+  height: 506px;
+  background: url('@{imgPath}/video/video-bg.jpg') no-repeat center top #000;
+  background-size: cover;
+  text-align: center;
+  video {
+    height: 434px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 35px;
+  }
+  .video-prev,
+  .video-next {
+    display: inline-block;
+    vertical-align: middle;
+    width: 165px;
+    height: 434px;
+    .font(rgba(255, 255, 255, 0.3), 2.7em, right, 434px);
+    &:hover {
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+  .video-prev {
+    text-align: left;
+    .icon {
+      .transform(rotate(180deg));
+    }
+  }
+}
+.video-main {
+  margin-right: 325px;
+  border-right: 1px solid #d8d8d8;
+  padding: 0 38px 0 30px;
+  .video-title {
+    .font(#414040, 1.4em, left, 30px, 700);
+    padding: 23px 0 19px 0;
+  }
+  .video-author {
+    .video-author_avatar {
+      height: 41px;
+      width: 41px;
+      display: block;
+      border-radius: 50%;
+      float: left;
+      margin-right: 13px;
+    }
+    .video-author_info {
+      float: left;
+      .name {
+        .font(@green, 1em, left, 22px, 400);
+        .ellipsis;
+      }
+      .date {
+        .font(#5a5858, 0.65em, left, 22px, 400);
+        span {
+          color: #727272;
+          padding-right: 3px;
+          font-size: 1.07em;
+        }
+      }
+    }
+  }
+  .video-actions {
+    clear: both;
+    padding: 14px 0 27px 54px;
+    .video-actions_statistic {
+      letter-spacing: -4px;
+      text-align: left;
+      padding-top: 7px;
+      float: left;
+      margin-left: 61px;
+      position: relative;
+      z-index: 0;
+      opacity: 1;
+      .transition(all .1s linear);
+      .stat_item {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 15px;
+        .font(#727272, 0.65em, left, 20px);
+        .icon {
+          margin-right: 3px;
+          font-size: 8px;
+        }
+      }
+      &.hide {
+        z-index: -1;
+        opacity: 0;
+        .transition(all .1s linear);
+      }
+    }
+  }
+  .button {
+    padding: 0 17px;
+    height: 32px;
+    border: 1px solid #3d6fd0;
+    border-radius: 3px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 9px;
+    float: left;
+    .font(#3d6fd0, .8em, center, 31px, 400);
+    letter-spacing: 0.05em;
+    .icon {
+      font-size: 1.35em;
+      margin-right: 10px;
+      margin-top: -2px;
+    }
+    &.like {
+      padding: 0 11px;
+    }
+    &.b1 {
+      background-color: #3d6fd0;
+      color: #fff;
+      .transition(all .3s linear);
+      &:hover {
+        .transition(all .3s linear);
+        border-color: #2B5BB8;
+        background-color: #2B5BB8;
+      }
+    }
+    &.b2 {
+      overflow: hidden;
+      position: relative;
+      width: 120px;
+      .transition(all .1s linear);
+      .normal,
+      .hover {
+        display: block;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        .transition(all .2s linear);
+      }
+      .normal {
+        top: 0;
+      }
+      .hover {
+        top: 32px;
+      }
+      &:hover {
+        .normal,
+        .hover {
+          .transition(all .2s linear);
+        }
+        .transition(all .1s linear);
+        color: #fff;
+        border-color: #3d6fd0;
+        background-color: #3d6fd0;
+        .normal {
+          top: -32px;
+        }
+        .hover {
+          top: 0;
+        }
+      }
+    }
+  }
+  .video-share {
+    float: right;
+    position: relative;
+    .button {
+      height: 30px;
+      margin-right: 0px;
+      padding: 0 7px 0 13px;
+      font-size: .75em;
+      line-height: 28px;
+      position: relative;
+      z-index: 2;
+      .icon {
+        font-size: 1.3em;
+        margin-right: 9px;
+      }
+    }
+    .video-share_links {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+      left: -230px;
+      top: -2px;
+      white-space: nowrap;
+      line-height: 0;
+      letter-spacing: -4px;
+      .transition(all .1s linear);
+      .share_link {
+        display: inline-block;
+        vertical-align: middle;
+        width: 32px;
+        height: 32px;
+        margin: 0 3px;
+        .font(#a2b1bd, 1.9em, left, 28px);
+        .icon-facebook {
+          color: #23458b;
+        }
+      }
+    }
+    &.show {
+      .video-share_links {
+        left: -275px;
+        opacity: 1;
+        z-index: 1;
+        .transition(all .1s linear);
+      }
+    }
+  }
+  .video-desc {
+    border-top: 1px solid #d8d8d8;
+    background-color: #fbfbfb;
+    padding: 0 38px 0 84px;
+    margin: 0 -38px 0 -30px;
+    .video-desc_text {
+      .font(#4c4b4b, .7em, left, 21px);
+      padding: 21px 0 15px 0;
+    }
+  }
+  .video-tags {
+    &.tags {
+      padding: 15px 0;
+      margin: 0 -5px;
+      width: auto;
+      display: inline-block;
+      .tags-list .tags-tag {
+        height: 30px;
+        margin: 0px 5px 0 5px;
+        &>span {
+          height: 28px;
+          font-size: 0.6em;
+          line-height: 29px;
+          background-color: #fbfbfb;
+        }
+        &:hover > span {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+  .video-comments {
+    margin: 0 -8px;
+    &>div,
+    &>div>span,
+    &>div iframe,
+    .fb_iframe_widget,
+    .fb_iframe_widget span,
+    .fb_iframe_widget iframe {
+      width: 100% !important;
+    }
+
+    .fb_iframe_widget iframe {
+      .pluginFontHelvetica, .pluginFontHelvetica button, .pluginFontHelvetica input, .pluginFontHelvetica label, .pluginFontHelvetica select, .pluginFontHelvetica td, .pluginFontHelvetica textarea {
+        font-family: 'Muli';
+      }
+    }
+
+  }
+}
+.video-recommended {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: 800px;
+  width: 325px;
+  padding: 0 12px 0 15px;
+  .video-list-item {
+    margin-left: 9px;
+  }
+  .video-rec_title {
+    margin-top: 18px;
+    .font(#414040, 1.05em, left, 29px, 700);
+  }
+  .autoplay {
+    padding-left: 41px;
+    margin-bottom: 22px;
+  }
+}
+
+

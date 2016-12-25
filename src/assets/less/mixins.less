@@ -1,0 +1,88 @@
+@images: "./src/assets/img";
+@blue: #3d6fd0;
+@gray: #727272;
+@green: #6ad04b;
+@formInputGray: #757575;
+@contentWidth: 913px;
+
+.font (@color, @size, @align: left, @line_height: inherit, @weight: 300) {
+  color       : @color;
+  font-size   : @size;
+  text-align  : @align;
+  line-height : @line_height;
+  font-weight : @weight;
+  letter-spacing: .04em;
+}
+
+.transform (@transform) {
+  -webkit-transform : @transform;
+  -moz-transform    : @transform;
+  -o-transform      : @transform;
+  -ms-transform     : @transform;
+  transform         : @transform;
+}
+
+.transition (...) {
+  @props: ~`"@{arguments}".replace(/[\[\]]/g, '')`;
+  -webkit-transition : @props;
+  -moz-transition    : @props;
+  -o-transition      : @props;
+  -ms-transition     : @props;
+  transition         : @props;
+}
+
+.animation (@animation) {
+  animation         : @animation;
+  -o-animation      : @animation;
+  -ms-animation     : @animation;
+  -webkit-animation : @animation;
+  -moz-animation    : @animation;
+}
+
+.ellipsis {
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  width: 100%;
+}
+
+.gradient (@top_color, @bottom_color) {
+  background: @top_color;
+  background: -moz-linear-gradient(top, @top_color 0%, @bottom_color 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@top_color), color-stop(100%,@bottom_color));
+  background: -webkit-linear-gradient(top, @top_color 0%,@bottom_color 100%);
+  background: -o-linear-gradient(top, @top_color 0%,@bottom_color 100%);
+  background: -ms-linear-gradient(top, @top_color 0%,@bottom_color 100%);
+  background: linear-gradient(to bottom, @top_color 0%,@bottom_color 100%);
+}
+
+.diagonal_gradient (@left_top_color, @right_bottom_color) {
+  background: -moz-linear-gradient(-45deg, @left_top_color 0%, @right_bottom_color 100%); 
+  background: -webkit-linear-gradient(-45deg, @left_top_color 0%,@right_bottom_color 100%); 
+  background: linear-gradient(135deg, @left_top_color 0%,@right_bottom_color 100%); 
+  background: -o-linear-gradient(-45deg, @left_top_color 0%, @right_bottom_color 100%);
+  background: -ms-linear-gradient(-45deg, @left_top_color 0%, @right_bottom_color 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=@left_top_color, endColorstr=@right_bottom_color, GradientType=1 );
+        
+}
+
+.triangle(@size, @color){
+  width: 0; 
+  height: 0; 
+  border-left: @size solid transparent;
+  border-right: @size solid transparent;
+  border-bottom: @size*1.3 solid @color;
+}
+
+.triangle_down(@size, @color){
+  width: 0; 
+  height: 0; 
+  border-left: @size solid transparent;
+  border-right: @size solid transparent;
+  border-top: @size*1.3 solid @color;
+}

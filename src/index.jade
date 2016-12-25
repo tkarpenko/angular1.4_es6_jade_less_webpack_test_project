@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+html(ng-app="drones" lang="en")
+  head
+    //- include ./includes/meta.jade
+    title Drones
+  body(ng-controller="appCtrl as app" class="{{bodyClass}}")
+    //- include ./includes/layout.jade
+    //- div(ui-view="app")
+    //- fb:login-button(show-faces="true" max-rows="1" size="large")
+    //- #fb-root
+    //- include ./includes/vendor.jade
+    div(ui-view="modal")
+    div(ui-view="app")

@@ -1,0 +1,111 @@
+.video-container
+  button.video-prev(type="button")
+    i.icon.icon-arrow_big
+  video(preload="auto" controls="true" poster="/assets/img/home/top.jpg")
+    source(src=require("../../../assets/img/home/top_video.mp4") type="video/mp4")
+    | Your browser doesn't support HTML5 video tag.
+  button.video-next(type="button")
+    i.icon.icon-arrow_big
+.clearfix
+  .video-main
+    .video-title Video Name
+    .video-author
+      img.video-author_avatar(src=require('../../../assets/img/home/top.jpg'))
+      .video-author_info
+        .name Jason Harper
+        .date 
+          span Published: 
+          | 12 January 2016
+    .video-actions.clearfix
+      button.button.b1(type="button") Follow Channel
+      button.button.like.b2(type="button") 
+        .normal
+          i.icon.icon-heart_filled
+          | Like Video
+        .hover
+          i.icon.icon-heart_filled
+          | Like Video
+      .video-actions_statistic(ng-class="{hide : video.isShareOpen}")
+        .stat_item
+          i.icon.icon-eye
+          | 2222 views
+        .stat_item
+          i.icon.icon-heart
+          | 2222 likes
+        .stat_item
+          i.icon.icon-chat
+          | 2222 comments
+      .video-share(ng-class="{show : video.isShareOpen}")
+        button.button(type="button" ng-click="video.toggleShare()") 
+          i.icon.icon-share
+          | Share
+        .video-share_links.clearfix
+          a.share_link(href=""): i.icon.icon-facebook
+          a.share_link(href=""): i.icon.icon-facebook
+          a.share_link(href=""): i.icon.icon-facebook
+          a.share_link(href=""): i.icon.icon-facebook
+          a.share_link(href=""): i.icon.icon-facebook
+          a.share_link(href=""): i.icon.icon-facebook
+          a.share_link(href=""): i.icon.icon-facebook
+    .video-desc
+      .video-desc_text Ut orci metus, posuere. Ut orci metus, posuere. Ut orci metus, posuere. Ut orci metus, posuere. Ut orci metus, posuere. Ut orci metus, posuere. Ut orci metus, posuere. Ut orci metus, posuere. Ut orci metus, posuere. Ut orci metus, posuere. Ut orci metus, posuere. Ut orci metus, posuere. Ut orci metus, posuere. Ut orci metus, posuere. 
+      .video-tags.tags
+        .tags-list
+          a.tags-tag(href="/videos/tags=championship"): span #championship
+          a.tags-tag(href="/videos/tags=racing"): span #racing
+          a.tags-tag(href="/videos/tags=dubai"): span #dubai
+    .video-comments
+      div(class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-numposts="5")
+
+
+  .video-recommended(style="height:{{video.videoListHeight}}px;")
+    .video-rec_title Recommended Videos
+    d-autoplay
+    .scroll_fast(
+      ng-scrollable="{scrollX:'none',scrollY:'right'}" 
+      style="width:100%;height:{{video.videoListScroll}}px;"
+      spy-y="posY"
+    )
+      a.video-list-item.next(href="/")
+        .cover
+          .img(style="background-image:url('/assets/img/home/top.jpg');")
+          .time 02:23
+          .label next video
+        .desc
+          .title Drone racing @ Miami Dolphins stadium
+          .author
+            img.avatar(src="/assets/img/home/top.jpg")
+            | Beulah Robinson
+          .views 821 views
+      a.video-list-item(href="/" class="watched")
+        .cover
+          .img(style="background-image:url('/assets/img/home/top.jpg');")
+          .time 02:23
+        .desc
+          .title Drone racing @ Miami Dolphins stadium
+          .author
+            img.avatar(src="/assets/img/home/top.jpg")
+            | Beulah Robinson
+          .views 821 views
+      a.video-list-item(href="/" class="watched")
+        .cover
+          .img(style="background-image:url('/assets/img/home/top.jpg');")
+          .time 02:23
+        .desc
+          .title Drone racing @ Miami Dolphins stadium
+          .author
+            img.avatar(src="/assets/img/home/top.jpg")
+            | Beulah Robinson
+          .views 821 views
+      a.video-list-item(href="/" class="watched")
+        .cover
+          .img(style="background-image:url('/assets/img/home/top.jpg');")
+          .time 02:23
+        .desc
+          .title Drone racing @ Miami Dolphins stadium
+          .author
+            img.avatar(src="/assets/img/home/top.jpg")
+            | Beulah Robinson
+          .views 821 views
+
+
