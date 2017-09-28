@@ -11,7 +11,7 @@
 ### Steps to fire up the project localy:
 
 ```
-git clone git@github.com:tkarpenko/angular1.4_es6_jade_less_webpack_test_project.git
+git clone https://github.com/tkarpenko/angular1.4_es6_jade_less_webpack_test_project.git
 cd angular1.4_es6_jade_less_webpack_test_project
 npm i
 npm start
