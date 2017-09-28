@@ -11,8 +11,12 @@
 ### Steps to fire up the project localy:
 
 ```
-git clone git@github.com:tkarpenko/angular1.4_es6_webpack_test_project.git
-cd angular1.4_es6_webpack_test_project
+git clone git@github.com:tkarpenko/angular1.4_es6_jade_less_webpack_test_project.git
+cd angular1.4_es6_jade_less_webpack_test_project
 npm i
 npm start
 ```
+
+### Take a look:
+Open browser tab with [Local Project](http://localhost:3000/).
+
